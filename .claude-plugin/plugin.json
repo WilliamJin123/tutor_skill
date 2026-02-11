@@ -1,0 +1,12 @@
+{
+  "name": "tutor",
+  "description": "Audience-aware tutorial generation and Q&A for any codebase",
+  "version": "0.1.0",
+  "author": {
+    "name": "William Jin",
+    "email": "jinwilliam.jin@gmail.com"
+  },
+  "repository": "https://github.com/WilliamJin123/tutor_skill",
+  "license": "MIT",
+  "keywords": ["tutorials", "documentation", "education", "codebase"]
+}

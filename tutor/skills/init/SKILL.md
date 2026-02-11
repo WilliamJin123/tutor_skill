@@ -1,5 +1,5 @@
 ---
-name: init
+name: tutor:init
 description: >
   Use when setting up tutorial conventions for a project for the first time,
   or reconfiguring tutorial preferences. Creates .tutor/config.yaml,

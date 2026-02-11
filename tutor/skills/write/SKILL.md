@@ -1,5 +1,5 @@
 ---
-name: write
+name: tutor:write
 description: >
   Use when creating or updating tutorials, documentation, or explanatory
   writeups for project code. Generates audience-aware tutorials following

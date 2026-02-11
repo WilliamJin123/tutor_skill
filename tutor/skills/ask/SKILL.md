@@ -1,5 +1,5 @@
 ---
-name: ask
+name: tutor:ask
 description: >
   Use when asking questions about project architecture, design decisions,
   or how code works. Answers are grounded in existing project tutorials

@@ -1,7 +1,7 @@
 {
   "name": "tutor",
   "description": "Audience-aware tutorial generation and Q&A for any codebase",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "William Jin",
     "email": "jinwilliam.jin@gmail.com"

@@ -1,0 +1,13 @@
+{
+  "name": "tutor-plugin",
+  "owner": {
+    "name": "William Jin"
+  },
+  "plugins": [
+    {
+      "name": "tutor",
+      "source": "./tutor/",
+      "description": "Adds a /tutor skill for quick code tutoring"
+    }
+  ]
+}

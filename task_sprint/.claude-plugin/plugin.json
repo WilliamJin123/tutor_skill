@@ -1,0 +1,12 @@
+{
+  "name": "task_sprint",
+  "description": "Task sprint skill for managing and executing tasks efficiently",
+  "version": "0.1.0",
+  "author": {
+    "name": "William Jin",
+    "email": "jinwilliam.jin@gmail.com"
+  },
+  "repository": "https://github.com/WilliamJin123/wj_skills",
+  "license": "MIT",
+  "keywords": ["task management", "sprint planning", "execution", "productivity"]
+}

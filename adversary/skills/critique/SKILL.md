@@ -63,7 +63,7 @@ Format findings as a structured report. Do NOT pad with praise or soften finding
 ## Critique: <target name>
 
 ### Critical (must fix)
-- **[Category]-[issue number starting from 1]** `file:line` — <description of the issue>
+- **[Category]** `file:line` — <description of the issue>
   Evidence: <quote the problematic code or plan text>
   Fix: <specific correction>
 
@@ -88,8 +88,10 @@ Rules for the report:
 - If you found nothing in a category, don't list the category. No "N/A" padding.
 - The summary assessment should be honest. If the code is solid, say so. If it's fragile, say that.
 
-## Step 5: Offer corrections
+## Step 5: Walk through fixes
 
-After presenting the report, ask the user about each issue one by one by providing options for solutions.
+After the report, iterate through each finding one at a time (highest severity first). For each issue, use AskUserQuestion with:
+- Concrete fix options
+- A **"Skip"** option to reject the fix and move on
 
-Implement based on user specifications.
+Apply all the fixes after doing a full walkthrough of all the issues.

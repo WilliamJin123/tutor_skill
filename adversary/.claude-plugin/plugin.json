@@ -1,7 +1,7 @@
 {
   "name": "adversary",
   "description": "adversary for testing, debugging, and rewriting plans",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": {
     "name": "William Jin",
     "email": "jinwilliam.jin@gmail.com"

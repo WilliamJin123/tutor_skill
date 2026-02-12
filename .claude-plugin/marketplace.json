@@ -8,6 +8,11 @@
       "name": "tutor",
       "source": "./tutor/",
       "description": "Adds a /tutor skill for quick code tutoring"
+    },
+    {
+      "name": "adversary",
+      "source": "./adversary/",
+      "description": "Adds an adversary skill for testing, debugging, and rewriting plans"
     }
   ]
 }

@@ -63,7 +63,7 @@ Format findings as a structured report. Do NOT pad with praise or soften finding
 ## Critique: <target name>
 
 ### Critical (must fix)
-- **[Category]** `file:line` — <description of the issue>
+- **[Category]-[issue number starting from 1]** `file:line` — <description of the issue>
   Evidence: <quote the problematic code or plan text>
   Fix: <specific correction>
 

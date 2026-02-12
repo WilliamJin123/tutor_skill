@@ -70,3 +70,7 @@ Write the tutorial to the tutorials/ directory using the configured naming conve
 - If updating, overwrite the existing file
 
 Report what was written: filename, sections covered, word count estimate.
+
+## Step 7: Commit
+
+Commit the tutorial with a basic overview of it in the commit message.

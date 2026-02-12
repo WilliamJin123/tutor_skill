@@ -1,4 +1,4 @@
----
+s---
 name: tutor:ask
 description: >
   Use when asking questions about project architecture, design decisions,

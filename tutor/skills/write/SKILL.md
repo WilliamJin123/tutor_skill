@@ -73,4 +73,4 @@ Report what was written: filename, sections covered, word count estimate.
 
 ## Step 7: Commit
 
-Commit the tutorial with a basic overview of it in the commit message.
+Commit the tutorial with a basic overview of it in the commit message.s

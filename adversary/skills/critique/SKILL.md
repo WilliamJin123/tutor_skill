@@ -90,6 +90,6 @@ Rules for the report:
 
 ## Step 5: Offer corrections
 
-After presenting the report, ask the user if they want to apply fixes, and what fixes they want using detailed questions and options for each specific issue in batches.
+After presenting the report, ask the user about each issue one by one by providing options for solutions.
 
-If the user chooses to apply fixes, make all changes in a single pass (do not interleave test runs with partial fixes). After applying, verify the fixes don't introduce new issues.
+Implement based on user specifications.

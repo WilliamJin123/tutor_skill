@@ -43,7 +43,7 @@ If the queue is empty, print:
 ```
 All tasks complete. Watching for new tasks... (Ctrl+C to stop)
 ```
-Then sleep 10 seconds (`sleep 10` on Unix, `powershell -command "Start-Sleep -Seconds 10"` on Windows) and go back to **3a**.
+Then sleep 17.5 seconds (`sleep 17.5` on Unix, `powershell -command "Start-Sleep -Seconds 17.5"` on Windows) and go back to **3a**.
 
 ### 3b: Execute a batch
 

@@ -1,12 +1,17 @@
 {
   "name": "adversary",
   "description": "adversary for testing, debugging, and rewriting plans",
-  "version": "0.1.3",
+  "version": "0.2.1",
   "author": {
     "name": "William Jin",
     "email": "jinwilliam.jin@gmail.com"
   },
   "repository": "https://github.com/WilliamJin123/wj_skills",
   "license": "MIT",
-  "keywords": ["adversarial", "testing", "debugging", "planning"]
+  "keywords": [
+    "adversarial",
+    "testing",
+    "debugging",
+    "planning"
+  ]
 }

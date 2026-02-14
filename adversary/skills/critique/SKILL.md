@@ -88,9 +88,19 @@ Rules for the report:
 - If you found nothing in a category, don't list the category. No "N/A" padding.
 - The summary assessment should be honest. If the code is solid, say so. If it's fragile, say that.
 
-## Step 5: Walk through fixes
+## Step 5: Walk through fixes or defer to defense
 
-After the report, iterate through each finding one at a time (highest severity first). For each issue, use AskUserQuestion with:
+After the report, use AskUserQuestion to ask:
+
+> "Walk through fixes now, or run `/adversary:defend` first to filter findings?"
+
+Options:
+- **Walk through fixes now** — proceed below (standalone mode)
+- **Run defense first** — stop here. The user will invoke `adversary:defend` next, which handles the walkthrough on surviving findings only.
+
+### If walking through fixes now:
+
+Iterate through each finding one at a time (highest severity first). For each issue, use AskUserQuestion with:
 - Concrete fix options
 - A **"Skip"** option to reject the fix and move on
 

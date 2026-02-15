@@ -96,7 +96,9 @@ After the report, use AskUserQuestion to ask:
 
 Options:
 - **Walk through fixes now** — proceed below (standalone mode)
-- **Run defense first** — stop here. The user will invoke `adversary:defend` next, which handles the walkthrough on surviving findings only.
+- **Run defense first** — automatically invoke `adversary:defend` using the Skill tool (`skill: "adversary:defend"`). Do NOT stop and wait for the user to invoke it manually. The defend skill will handle the walkthrough on surviving findings.
+
+If the user selects "Run defense first", invoke the Skill tool immediately and stop here — do not continue to the walkthrough below.
 
 ### If walking through fixes now:
 

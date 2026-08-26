@@ -5,8 +5,9 @@ description: >
   decisions. Default: diff-scoped report since the last audit/* git tag —
   parallel finder agents, adversarial verification, dated audit doc + tag.
   `fix` orchestrates remediation on a branch. `cron weekly` schedules the
-  report. Report mode never edits code; fix mode never touches main.
-version: 0.1.0
+  report. Trailing free text after the mode is a focus prompt threaded into
+  every finder. Report mode never edits code; fix mode never touches main.
+version: 0.2.0
 user-invocable: true
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Task, AskUserQuestion, Artifact, CronCreate, CronDelete, CronList, SendMessage, ToolSearch
 ---
@@ -22,6 +23,16 @@ The loop: audit → tag → user approves a fix batch → fix on a branch → us
 | `fix` | Remediate the newest audit, on a branch |
 | `cron weekly` | Install a weekly report cron (Monday 09:00) |
 | `cron off` | Remove that cron |
+
+Any trailing text after the mode keyword is a **focus prompt**: `/adversary:red-team full lead quality, extensibility`. After `fix`, trailing text names the batch (`fix F2 F5`) and replaces the confirm question. After `cron weekly`, it becomes every scheduled run's focus.
+
+## Focus
+
+A focus prompt shifts emphasis, never scope or rules: all six lenses still attack everything in scope, still read-only.
+
+- Paste it verbatim into every finder brief under `Focus for this run:`.
+- If it names a concern no lens covers, spawn one extra finder for that concern, same output contract.
+- Rank focus-relevant findings above equal-severity ones; open the report by restating the focus.
 
 ## Hard rules
 

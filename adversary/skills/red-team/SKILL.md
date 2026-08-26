@@ -4,13 +4,13 @@ description: >
   Recurring adversarial sweep-and-upgrade loop for a codebase and its design
   decisions. Default: diff-scoped report since the last audit/* git tag —
   parallel finder agents, adversarial verification, dated audit doc + tag.
-  `fix` orchestrates remediation on a branch. `cron weekly` schedules the
-  report. Trailing free text after the mode is a focus prompt threaded into
-  every finder. Subagents run on cheap models; synthesis stays with the
-  orchestrator. Report mode never edits code; fix mode never touches main.
-version: 0.3.0
+  `fix` orchestrates remediation on a branch. Trailing free text after the
+  mode is a focus prompt threaded into every finder. Subagents run on cheap
+  models; synthesis stays with the orchestrator. Report mode never edits
+  code; fix mode never touches main. Rerun whenever a sweep is wanted.
+version: 0.4.0
 user-invocable: true
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Task, AskUserQuestion, Artifact, CronCreate, CronDelete, CronList, SendMessage, ToolSearch
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Task, AskUserQuestion, Artifact, SendMessage, ToolSearch
 ---
 
 # Adversary Red-Team
@@ -22,10 +22,10 @@ The loop: audit → tag → user approves a fix batch → fix on a branch → us
 | (none) | Report, scoped to changes since the last `audit/*` tag |
 | `full` | Report, whole repo |
 | `fix` | Remediate the newest audit, on a branch |
-| `cron weekly` | Install a weekly report cron (Monday 09:00) |
-| `cron off` | Remove that cron |
 
-Any trailing text after the mode keyword is a **focus prompt**: `/adversary:red-team full lead quality, extensibility`. After `fix`, trailing text names the batch (`fix F2 F5`) and replaces the confirm question. After `cron weekly`, it becomes every scheduled run's focus.
+Any trailing text after the mode keyword is a **focus prompt**: `/adversary:red-team full lead quality, extensibility`. After `fix`, trailing text names the batch (`fix F2 F5`) and replaces the confirm question.
+
+The loop has no scheduler: rerun the skill whenever a sweep is wanted; the `audit/*` tag makes every rerun diff-scoped and idempotent.
 
 ## Focus
 
@@ -45,7 +45,7 @@ Subagents are volume; synthesis is judgment.
 
 ## Hard rules
 
-1. Report mode edits NO source code. It may write exactly: one audit doc, one commit containing only that doc, one `audit/*` tag, one artifact. Cron runs report mode, so cron never edits code.
+1. Report mode edits NO source code. It may write exactly: one audit doc, one commit containing only that doc, one `audit/*` tag, one artifact.
 2. Fix mode NEVER commits to main. All work on `red-team/fixes-YYYY-MM-DD`. The user merges; you do not.
 3. All DB access in report mode is SELECT-only.
 4. No finding without a concrete breaking scenario. No number in the report you did not reproduce yourself.
@@ -87,8 +87,3 @@ Then: commit the doc (nothing else in the commit), publish it as an artifact, `g
 ## Fix mode
 
 Read `references/fix-orchestration.md`. Follow it exactly.
-
-## Cron mode
-
-- `cron weekly`: use CronCreate (load via ToolSearch if deferred). Monday 09:00 local, prompt = run `/adversary:red-team` in this project directory. Tell the user it is report-only by construction. No cron tool available → hand the user the schedule to install manually and stop.
-- `cron off`: CronList, CronDelete the matching job, confirm.

@@ -6,8 +6,9 @@ description: >
   parallel finder agents, adversarial verification, dated audit doc + tag.
   `fix` orchestrates remediation on a branch. `cron weekly` schedules the
   report. Trailing free text after the mode is a focus prompt threaded into
-  every finder. Report mode never edits code; fix mode never touches main.
-version: 0.2.0
+  every finder. Subagents run on cheap models; synthesis stays with the
+  orchestrator. Report mode never edits code; fix mode never touches main.
+version: 0.3.0
 user-invocable: true
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Task, AskUserQuestion, Artifact, CronCreate, CronDelete, CronList, SendMessage, ToolSearch
 ---
@@ -33,6 +34,14 @@ A focus prompt shifts emphasis, never scope or rules: all six lenses still attac
 - Paste it verbatim into every finder brief under `Focus for this run:`.
 - If it names a concern no lens covers, spawn one extra finder for that concern, same output contract.
 - Rank focus-relevant findings above equal-severity ones; open the report by restating the focus.
+
+## Models
+
+Subagents are volume; synthesis is judgment.
+
+- Finders, refuters, and fix-mode lane agents: spawn with `model: sonnet` (`haiku` for purely mechanical checks). Never the orchestrator's top-tier model.
+- Scope, merging, severity calls, reproducing numbers, the report, and fix-mode waves 0/2: the orchestrator, in the main session. Never delegated.
+- Escalate a single subagent to `opus` only when its cheap-model result proved inadequate for a genuinely subtle brief.
 
 ## Hard rules
 

@@ -1,7 +1,7 @@
 {
   "name": "adversary",
   "description": "adversarial critique, defense, and a recurring red-team sweep loop (report / fix / cron)",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": {
     "name": "William Jin",
     "email": "jinwilliam.jin@gmail.com"

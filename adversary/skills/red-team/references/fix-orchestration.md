@@ -18,6 +18,7 @@ Parallel agents collide on shared files. Waves make collisions structurally impo
 ## 2. Wave 1 — lanes (parallel subagents)
 
 - Partition findings into lanes with strictly disjoint file ownership. Two lanes needing one file → move that change into Wave 0, or merge the lanes.
+- Spawn lanes with `model: sonnet`; escalate a lane to `opus` only after its first attempt proves inadequate.
 - Every brief states, explicitly:
   - Files you own — exhaustive list. Everything else is read-only.
   - No commits. No dev-DB writes.

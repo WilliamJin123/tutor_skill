@@ -12,7 +12,7 @@
     {
       "name": "adversary",
       "source": "./adversary/",
-      "description": "Adds an adversary skill for testing, debugging, and rewriting plans"
+      "description": "Adversarial skills: one-pass critique + defend, and a recurring red-team loop (diff-scoped audits, orchestrated fixes on a branch, weekly cron)"
     },
     {
       "name": "task_sprint",

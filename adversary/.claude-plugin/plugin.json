@@ -1,7 +1,7 @@
 {
   "name": "adversary",
-  "description": "adversary for testing, debugging, and rewriting plans",
-  "version": "0.2.2",
+  "description": "adversarial critique, defense, and a recurring red-team sweep loop (report / fix / cron)",
+  "version": "0.3.0",
   "author": {
     "name": "William Jin",
     "email": "jinwilliam.jin@gmail.com"
@@ -12,6 +12,8 @@
     "adversarial",
     "testing",
     "debugging",
-    "planning"
+    "planning",
+    "red-team",
+    "audit"
   ]
 }
